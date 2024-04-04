@@ -27,7 +27,7 @@ rescue LoadError
   # voxpupuli-release not present
 else
   GCGConfig.user = 'lsst-it'
-  GCGConfig.project = 'puppet-anaconda'
+  GCGConfig.project = 'puppet-htcondor'
 end
 
 desc "Run main 'test' task and report merged results to coveralls"
