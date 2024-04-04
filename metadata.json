@@ -1,0 +1,26 @@
+{
+  "name": "lsst-htcondor",
+  "version": "0.1.0",
+  "author": "AURA/LSST/Rubin Observatory",
+  "summary": "Installs htcondor as scheduler",
+  "license": "Apache-2.0",
+  "source": "https://github.com/lsst-it/puppet-htcondor.git",
+  "tags": [
+    "htcondor"
+  ],
+  "dependencies": [],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "AlmaLinux",
+      "operatingsystemrelease": [
+        "9"
+      ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 7.0.0 < 9.0.0"
+    }
+  ]
+}
