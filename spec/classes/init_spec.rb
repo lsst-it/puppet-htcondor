@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
-require 'spec_helper_acceptance'
+require 'spec_helper'
 
-describe 'htcondor class' do
+describe 'htcondor' do
   context 'with params' do
-    include_example 'the example', 'basic.pp'
     let(:params) do
       {
         htcondor_version: '23.0',
@@ -13,8 +12,6 @@ describe 'htcondor class' do
         htcondor_password: 'password'
       }
     end
-
-    it_behaves_like 'an idempotent resource'
 
     it { is_expected.to compile.with_all_deps }
 
@@ -25,6 +22,8 @@ describe 'htcondor class' do
     end
 
     it { is_expected.to contain_file('/etc/condor/condor_config.local') }
+
+    it { is_expected.to contain_file('/etc/condor/config.d/docker') }
 
     it { is_expected.to contain_file('/etc/condor/config.d/schedd').with_content(%r{^DAEMON_LIST = MASTER, SCHEDD}) }
 
