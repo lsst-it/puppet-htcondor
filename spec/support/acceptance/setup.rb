@@ -2,4 +2,5 @@
 
 configure_beaker(modules: :metadata) do |host|
   install_puppet_module_via_pmt_on(host, 'puppet/epel')
+  install_puppet_module_via_pmt_on(host, 'puppet/yum')
 end
