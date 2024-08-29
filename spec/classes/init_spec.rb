@@ -17,15 +17,15 @@ describe 'htcondor' do
 
     it { is_expected.to contain_yumrepo('condor') }
 
-    it do
-      is_expected.to contain_package('condor').that_requires('Yumrepo[condor]')
-    end
+    it { is_expected.to contain_package('condor').that_requires('Yumrepo[condor]') }
 
-    it { is_expected.to contain_file('/etc/condor/condor_config.local') }
+    it { is_expected.to contain_file('/etc/condor/condor_config.local').that_requires('Package[condor]') }
 
-    it { is_expected.to contain_file('/etc/condor/config.d/docker') }
+    it { is_expected.to contain_file('/etc/condor/config.d/docker').that_requires('Package[condor]') }
 
-    it { is_expected.to contain_file('/etc/condor/config.d/schedd').with_content(%r{^DAEMON_LIST = MASTER, SCHEDD}) }
+    it { is_expected.to contain_file('/etc/condor/config.d/schedd') }
+
+    it { is_expected.to contain_file('/etc/condor/config.d/dagman') }
 
     it do
       is_expected.to contain_service('condor').with(

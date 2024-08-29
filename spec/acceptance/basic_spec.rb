@@ -39,9 +39,20 @@ describe 'htcondor class' do
       end
     end
 
+    describe file('/etc/condor/config.d/dagman') do
+      it { is_expected.to be_file }
+      its(:content) { is_expected.to match %r{^DAGMAN_MANAGER_JOB_APPEND_GETENV = True} }
+    end
+
     describe file('/etc/condor/config.d/schedd') do
       it { is_expected.to be_file }
-      its(:content) { is_expected.to match %r{^DAEMON_LIST = MASTER, SCHEDD} }
+
+      its(:content) do
+        is_expected.to match <<~CONTENT
+          DAEMON_LIST = MASTER, SCHEDD
+          HISTORY_CONTAINS_JOB_ENVIRONMENT = False
+        CONTENT
+      end
     end
 
     describe file('/etc/condor/config.d/docker') do

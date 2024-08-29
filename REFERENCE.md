@@ -6,7 +6,16 @@
 
 ### Classes
 
+#### Public Classes
+
 * [`htcondor`](#htcondor): Installs htcondor as scheduler
+
+#### Private Classes
+
+* `htcondor::config`
+* `htcondor::install`
+* `htcondor::repo`
+* `htcondor::service`
 
 ## Classes
 
