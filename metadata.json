@@ -1,6 +1,6 @@
 {
   "name": "lsst-htcondor",
-  "version": "0.2.0",
+  "version": "0.2.1-rc0",
   "author": "AURA/LSST/Rubin Observatory",
   "summary": "Installs htcondor as scheduler",
   "license": "Apache-2.0",
