@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 Each new release typically also includes the latest modulesync defaults.
 These should not affect the functionality of the module.
 
+## [v0.2.0](https://github.com/lsst-it/puppet-htcondor/tree/v0.2.0) (2024-09-26)
+
+[Full Changelog](https://github.com/lsst-it/puppet-htcondor/compare/v0.1.0...v0.2.0)
+
+**Implemented enhancements:**
+
+- \(htcondor\) set new parameters [\#7](https://github.com/lsst-it/puppet-htcondor/pull/7) ([cbarria](https://github.com/cbarria))
+
 ## [v0.1.0](https://github.com/lsst-it/puppet-htcondor/tree/v0.1.0) (2024-04-05)
 
 [Full Changelog](https://github.com/lsst-it/puppet-htcondor/compare/9ce8b578d9beeaa0fdac30264596339ce564a524...v0.1.0)
