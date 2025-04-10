@@ -48,7 +48,7 @@ class htcondor::config {
 
   if $htcondor_pswfile and $htcondor_password {
     file { regsubst($htcondor_pswfile, '^(.*/).*$', '\1'):
-      ensure  => directory,
+      ensure => directory,
     }
 
     file { $htcondor_pswfile:
